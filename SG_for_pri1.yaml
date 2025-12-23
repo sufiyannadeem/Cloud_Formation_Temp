@@ -1,0 +1,22 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: This security group is created for MyVPC
+
+Resources:
+    SecurityGroups: 
+      Type: AWS::EC2::SecurityGroup
+      Properties:
+          GroupDescription: For Private subnet which allows only SSH
+          VpcId: {ID}
+          SecurityGroupIngress:
+            
+          
+          
+            - IpProtocol: tcp
+              FromPort: 22 #for SSH
+              ToPort: 22
+              CidrIp: 0.0.0.0/0
+          
+          SecurityGroupEgress:
+            - IpProtocol: -1 # All traffic
+              
+              CidrIp: 0.0.0.0/0

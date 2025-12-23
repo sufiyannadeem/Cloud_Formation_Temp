@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Instances Creation for Intellipaat Asssignment
+ 
+Resources:
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+        ImageId: ami-068c0051b15cdb816
+        InstanceType: t3.micro
+        KeyName: "test-server"
+        SecurityGroupIds:
+            - sg-098fd25beba83c12e
+        VpcId: vpc-0524dadd8ee5f6d43
+        SubnetId: subnet-0c9c95db5a8081416
+        Tags:
+            - Key: Name
+              Value: PubInstance
+
+        
+
+    
